@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class StackTest {
     @Test
-    public void canCreateStack()  {
+    public void canCreateStack() {
         Stack stack = new Stack();
         assertTrue(stack.isEmpty());
 
