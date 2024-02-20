@@ -13,11 +13,17 @@ public class Stack {
     }
 
     public int pop() {
+        if(size == 0){
+            throw new Underflow();
+        }
         --size;
         return -1;
     }
 
     public int getSize() {
         return size;
+    }
+
+    public class Underflow extends RuntimeException {
     }
 }

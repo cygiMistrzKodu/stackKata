@@ -20,7 +20,7 @@ public class StackTest {
 
         stack.push(0);
         assertFalse(stack.isEmpty());
-        assertEquals(1,stack.getSize());
+        assertEquals(1, stack.getSize());
 
     }
 
@@ -29,7 +29,7 @@ public class StackTest {
         stack.push(0);
         stack.pop();
         assertTrue(stack.isEmpty());
-        assertEquals(0,stack.getSize());
+        assertEquals(0, stack.getSize());
     }
 
     @Test
@@ -39,5 +39,12 @@ public class StackTest {
         assertEquals(2, stack.getSize());
     }
 
+    @Test
+    void poppingEmptyStack_throwsUnderflow() {
+        assertThrows(Stack.Underflow.class,
+                () -> {
+                    stack.pop();
+                });
 
+    }
 }
