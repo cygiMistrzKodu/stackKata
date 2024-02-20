@@ -28,6 +28,7 @@ public class StackTest {
         stack.push(0);
         stack.pop();
         assertTrue(stack.isEmpty());
+        assertEquals(1,stack.getSize());
     }
 
     @Test
