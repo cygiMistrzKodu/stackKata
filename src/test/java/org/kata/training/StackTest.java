@@ -29,4 +29,13 @@ public class StackTest {
         stack.pop();
         assertTrue(stack.isEmpty());
     }
+
+    @Test
+    public void afterTwoPushes_sizeIsTwo() {
+        stack.push(0);
+        stack.push(0);
+        assertEquals(2, stack.getSize());
+    }
+
+
 }
