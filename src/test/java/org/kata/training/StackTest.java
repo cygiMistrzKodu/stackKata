@@ -22,4 +22,11 @@ public class StackTest {
         assertFalse(stack.isEmpty());
 
     }
+
+    @Test
+    public void afterOnePushAndOnePop_isEmpty() {
+        stack.push(0);
+        stack.pop();
+        assertTrue(stack.isEmpty());
+    }
 }

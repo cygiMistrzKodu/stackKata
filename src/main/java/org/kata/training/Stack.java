@@ -10,4 +10,9 @@ public class Stack {
     public void push(int element) {
         empty = false;
     }
+
+    public int pop() {
+        empty = true;
+        return -1;
+    }
 }
