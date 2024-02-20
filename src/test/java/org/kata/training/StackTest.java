@@ -20,6 +20,7 @@ public class StackTest {
 
         stack.push(0);
         assertFalse(stack.isEmpty());
+        assertEquals(1,stack.getSize());
 
     }
 
