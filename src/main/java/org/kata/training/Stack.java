@@ -3,23 +3,21 @@ package org.kata.training;
 public class Stack {
     private boolean empty = true;
     private int size = 0;
-    private int element;
+    private int [] element = new int[2];
 
     public boolean isEmpty() {
         return size == 0;
     }
 
     public void push(int element) {
-        this.element = element;
-        size++;
+        this.element[size++] = element;
     }
 
     public int pop() {
         if(size == 0){
             throw new Underflow();
         }
-        --size;
-        return element;
+        return element[--size];
     }
 
     public int getSize() {
