@@ -66,10 +66,10 @@ public class StackTest {
     }
 
     @Test
-    public void settNumberOfElementsInStack() {
-        stack.setMaxElement(6);
+    public void setNumberOfElementsInStack() {
+        stack.setMaxElements(6);
         assertEquals(6,stack.getMaxElements());
-        stack.setMaxElement(8);
+        stack.setMaxElements(8);
         assertEquals(8,stack.getMaxElements());
     }
 }

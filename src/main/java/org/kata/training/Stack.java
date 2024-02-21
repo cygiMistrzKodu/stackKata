@@ -3,6 +3,7 @@ package org.kata.training;
 public class Stack {
     private int size = 0;
     private int[] element = new int[2];
+    private int maxElements = 0;
 
 
     public boolean isEmpty() {
@@ -24,11 +25,12 @@ public class Stack {
         return size;
     }
 
-    public void setMaxElement(int maxElements) {
+    public void setMaxElements(int maxElements) {
+        this.maxElements = maxElements;
     }
 
     public int getMaxElements() {
-        return 6;
+        return  maxElements;
     }
 
 
