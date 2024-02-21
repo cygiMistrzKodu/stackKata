@@ -64,4 +64,10 @@ public class StackTest {
         assertEquals(99,stack.pop());
 
     }
+
+    @Test
+    public void settNumberOfElementsInStack() {
+        stack.setMaxElement(6);
+        assertEquals(6,stack.getMaxElements());
+    }
 }
