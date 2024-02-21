@@ -40,11 +40,20 @@ public class StackTest {
     }
 
     @Test
-    void poppingEmptyStack_throwsUnderflow() {
+   public void poppingEmptyStack_throwsUnderflow() {
         assertThrows(Stack.Underflow.class,
                 () -> {
                     stack.pop();
                 });
 
     }
+
+    @Test
+    public void afterPushingX_willPopX() {
+        stack.push(99);
+        assertEquals(99,stack.pop());
+        stack.push(88);
+        assertEquals(88,stack.pop());
+    }
+
 }
