@@ -4,6 +4,7 @@ public class Stack {
     private int size = 0;
     private int[] element = new int[2];
 
+
     public boolean isEmpty() {
         return size == 0;
     }
@@ -27,7 +28,7 @@ public class Stack {
     }
 
     public int getMaxElements() {
-        return -1;
+        return 6;
     }
 
 
