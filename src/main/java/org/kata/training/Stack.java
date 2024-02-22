@@ -36,8 +36,16 @@ public class Stack {
         int[] oldStack = this.elements;
         this.elements = new int[maxElements];
 
-        int elementToCopy = Math.min(oldStack.length,maxElements);
+        int elementToCopy = Math.min(oldStack.length, maxElements);
         System.arraycopy(oldStack, 0, this.elements, 0, elementToCopy);
+
+        if (isStackCapacitySmallerThanPreviousOne()) {
+            this.size = this.elements.length;
+        }
+    }
+
+    private boolean isStackCapacitySmallerThanPreviousOne() {
+        return this.elements.length < this.size;
     }
 
     public int getMaxElements() {

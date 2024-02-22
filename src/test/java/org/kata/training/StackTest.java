@@ -108,4 +108,15 @@ public class StackTest {
 
         assertEquals(9,stack.pop());
     }
+
+    @Test
+    public void ifsetLessCapacityThanInOldStackPresentThenTheMostRecentAreRemoved() {
+        stack.push(3);
+        stack.push(6);
+        stack.push(7);
+        stack.push(8);
+        stack.setMaxElements(2);
+        assertEquals(6, stack.pop());
+
+    }
 }
