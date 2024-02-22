@@ -35,4 +35,7 @@ public class Stack {
 
     public class Underflow extends RuntimeException {
     }
+
+    public class Overflow extends RuntimeException {
+    }
 }
