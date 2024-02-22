@@ -10,7 +10,13 @@ public class Stack {
     }
 
     public void push(int element) {
-        this.element[size++] = element;
+
+        try {
+            this.element[size++] = element;
+
+        } catch (ArrayIndexOutOfBoundsException exception) {
+            throw new Overflow();
+        }
     }
 
     public int pop() {
@@ -25,11 +31,11 @@ public class Stack {
     }
 
     public void setMaxElements(int maxElements) {
-        this.element  = new int[maxElements];
+        this.element = new int[maxElements];
     }
 
     public int getMaxElements() {
-        return  element.length;
+        return element.length;
     }
 
 
