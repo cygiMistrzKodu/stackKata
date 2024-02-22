@@ -2,7 +2,7 @@ package org.kata.training;
 
 public class Stack {
     private int size = 0;
-    private int[] element = new int[5];
+    private int[] elements = new int[5];
 
 
     public boolean isEmpty() {
@@ -11,10 +11,10 @@ public class Stack {
 
     public void push(int element) {
 
-        if (size >= this.element.length) {
+        if (size >= this.elements.length) {
             throw new Overflow();
         } else {
-            this.element[size++] = element;
+            this.elements[size++] = element;
         }
 
 
@@ -24,7 +24,7 @@ public class Stack {
         if (size == 0) {
             throw new Underflow();
         }
-        return element[--size];
+        return elements[--size];
     }
 
     public int getSize() {
@@ -32,11 +32,11 @@ public class Stack {
     }
 
     public void setMaxElements(int maxElements) {
-        this.element = new int[maxElements];
+        this.elements = new int[maxElements];
     }
 
     public int getMaxElements() {
-        return element.length;
+        return elements.length;
     }
 
 
