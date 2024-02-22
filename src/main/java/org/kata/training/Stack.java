@@ -2,8 +2,7 @@ package org.kata.training;
 
 public class Stack {
     private int size = 0;
-    private int[] element = new int[2];
-    private int maxElements = 5;
+    private int[] element = new int[5];
 
 
     public boolean isEmpty() {
@@ -26,11 +25,11 @@ public class Stack {
     }
 
     public void setMaxElements(int maxElements) {
-        this.maxElements = maxElements;
+        this.element  = new int[maxElements];
     }
 
     public int getMaxElements() {
-        return  maxElements;
+        return  element.length;
     }
 
 
