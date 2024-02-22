@@ -3,7 +3,7 @@ package org.kata.training;
 public class Stack {
     private int size = 0;
     private int[] element = new int[2];
-    private int maxElements = 10;
+    private int maxElements = 5;
 
 
     public boolean isEmpty() {
