@@ -100,4 +100,12 @@ public class StackTest {
                     stack.push(6);
                 });
     }
+
+    @Test
+    public void elementsStillPresentIfChangingCapacity() {
+        stack.push(9);
+        stack.setMaxElements(3);
+
+        assertEquals(9,stack.pop());
+    }
 }
