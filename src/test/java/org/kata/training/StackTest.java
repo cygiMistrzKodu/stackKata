@@ -72,4 +72,9 @@ public class StackTest {
         stack.setMaxElements(8);
         assertEquals(8,stack.getMaxElements());
     }
+
+    @Test
+    public void defaultMaxElementInStackIs10() {
+        assertEquals(10,stack.getMaxElements());
+    }
 }
