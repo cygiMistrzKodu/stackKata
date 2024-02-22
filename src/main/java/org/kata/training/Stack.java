@@ -11,12 +11,13 @@ public class Stack {
 
     public void push(int element) {
 
-        try {
-            this.element[size++] = element;
-
-        } catch (ArrayIndexOutOfBoundsException exception) {
+        if (size >= this.element.length) {
             throw new Overflow();
+        } else {
+            this.element[size++] = element;
         }
+
+
     }
 
     public int pop() {
